@@ -1,0 +1,10 @@
+<% if @error =="2" %>
+  <%= 'Sorry but that pokemon name is taken' %>
+<% elsif @error=="1" %>
+  <%= 'Sorry but you forgot to enter a name' %>
+<% end %>
+<%= simple_form_for @pokemon do |u| %>
+  <%= u.input :name%>
+  <%= u.button :submit%>
+
+<% end %>
